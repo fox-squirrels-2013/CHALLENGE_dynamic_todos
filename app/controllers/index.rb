@@ -4,6 +4,13 @@ get '/' do
 end
 
 post '/add_todo' do
-  p "Inside /add_todo route!"
+  p '*'*50
+  p "Inside the post /add_todo route!"
+  # @todo = Todo.create(params)
+  redirect '/'
+end
+
+post '/' do
+  p "Inside the post / route!"
 end
 
