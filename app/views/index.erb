@@ -1,19 +1,23 @@
 <div id="todo">
   <div class="toolbox">
-    <input type="text" class="todo" /><button class="add">Add Todo</button>
+    <form id='new_todo' action='/create' method='post'>
+      <input type="text" class="add_todo" name='todo[task]'/>
+      <input type='submit' value='Add Todo'>
+    </form>
   </div>
 
   <div class="todo_list">
 
-  </div>
-
-  <div id="todo_template" style="display: none;">
-    <div class="todo">
-      <h2>Todo Name</h2>
+    <% @todos.each do |todo| %>
+    <div id="<%= todo.id %>" class="todo <%= 'complete' if todo.complete  %>">
+      <h2><%= todo.task %></h2>
       <ul>
-        <li><a href="#" class="delete">Delete</a></li>
-        <li><a href="#" class="complete">Complete</a></li>
+        <li><a href="#" class="delete" ><i class="fa fa-trash-o fa-2x delete"></i></a></li>
+        <li><a href="#" class="complete"><i class="fa fa-star-o fa-2x complete"></i></a></li>
+        <!-- <li><a href="#" class="complete">comp</a></li> -->
       </ul>
     </div>
+    <% end %>
+
   </div>
 </div>
