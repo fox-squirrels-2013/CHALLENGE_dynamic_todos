@@ -4,7 +4,7 @@ $(document).ready(function() {
     $(".todo_list").on('click', deleteOrComplete)
     $(".todo_list").sortable()
     $( ".todo" ).disableSelection();
-    $('#nav').on('click', expandOptions)
+    $('.fa-angle-double-right').on('click', expandOptions)
   }
 
   function addTodo(e){
@@ -46,9 +46,13 @@ $(document).ready(function() {
   }
 
   function expandOptions(){
-    $('#nav').toggle.css('margin-left', '-13%')
-    console.log('expandin')
+    $('#nav').animate({left: '0%'}, 500, function(){
+      $(this).find('i')[0].className = "fa fa-angle-double-left fa-2x"
+    })
   }
+
+
+
 
   bindEvents();
 });
