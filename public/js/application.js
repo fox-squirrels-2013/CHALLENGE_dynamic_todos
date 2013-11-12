@@ -4,7 +4,7 @@ $(document).ready(function() {
     $(".todo_list").on('click', deleteOrComplete)
     $(".todo_list").sortable()
     $( ".todo" ).disableSelection();
-    $('.fa-angle-double-right').on('click', expandOptions)
+    $('#nav').on('click', expandOptions)
   }
 
   function addTodo(e){
@@ -45,10 +45,21 @@ $(document).ready(function() {
     })
   }
 
-  function expandOptions(){
-    $('#nav').animate({left: '0%'}, 500, function(){
-      $(this).find('i')[0].className = "fa fa-angle-double-left fa-2x"
-    })
+  function expandOptions(e){
+    console.log('clicked nav')
+    var state = $(e.target).closest('div')[0].className
+    if (state === 'closed') {
+      $('#nav').animate({left: '0%'}, 350, function(){
+        $(this)[0].className = 'open'
+        $(this).find('i')[0].className = "fa fa-angle-double-left fa-2x"
+      })
+    } else if (state === 'open') {
+      $('#nav').animate({left: '-13%'}, 350, function(){
+        $(this)[0].className = 'closed'
+        $(this).find('i')[0].className = "fa fa-angle-double-right fa-2x"
+      })
+    }
+
   }
 
 
