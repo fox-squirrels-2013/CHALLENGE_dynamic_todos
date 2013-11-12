@@ -42,13 +42,12 @@ input {
   font-size: 30px;
   width: 15%;
   border: none;
-  color: #e74c3c;
+  color: #fff;
   background-color: #C1554A;
   border-radius: 3px;
 }
 
 .sub_new:hover {
-  color: #e74c3c;
   background-color: #A03D6D;
 }
 
@@ -130,3 +129,7 @@ input {
   color: #fff;
   cursor: pointer;
 }
+
+/*#nav i:hover {
+  color: #C1554A;
+}*/
