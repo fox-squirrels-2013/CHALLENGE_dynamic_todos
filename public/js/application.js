@@ -8,17 +8,17 @@ $(document).ready(function() {
   }
 
   //Create functions to add, remove and complete todos
-  // $('.add').on('click', function(e){
-  //   e.preventDefault();
-  //   $.ajax({
-  //     url: '/', 
-  //     type: 'post'
-  //   }).done(function(response){
-  //     console.log("Inside done function.");
-  //   }).fail(function(){
-  //     console.log("Inside fail function.");
-  //   })
-  // }
+  $('#add_todo').submit(function(e){
+    e.preventDefault();
+    console.log("After preventDefault!")
+    $.ajax({
+      url: "/add_todo", //this.action,
+      type: "post", //this.method,
+      data: $(this).serialize()
+    }).done(function(response){
+      console.log("Inside done function.");
+    })
+  })
 
 
   function buildTodo(todoName) {
