@@ -4,6 +4,7 @@ $(document).ready(function() {
     $(".todo_list").on('click', deleteOrComplete)
     $(".todo_list").sortable()
     $( ".todo" ).disableSelection();
+    $('#nav').on('click', expandOptions)
   }
 
   function addTodo(e){
@@ -42,6 +43,11 @@ $(document).ready(function() {
     }).fail(function(jqXHR, textStatus, errorThrown){
       console.log("fail" + errorThrown)
     })
+  }
+
+  function expandOptions(){
+    $('#nav').toggle.css('margin-left', '-13%')
+    console.log('expandin')
   }
 
   bindEvents();

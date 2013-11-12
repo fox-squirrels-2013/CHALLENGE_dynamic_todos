@@ -1,5 +1,5 @@
 get '/' do
-  @todos = Todo.all :order => :id
+  @todos = Todo.all # :order => :id
   p @todos.first
   erb :index
 end
