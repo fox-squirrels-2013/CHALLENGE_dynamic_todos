@@ -3,30 +3,68 @@ body {
 }
 
 #todo {
-  width: 60%;
+  width: 700px;
   margin: auto;
 }
 
 .toolbox {
+  padding: 50px 0 30px;
   text-align: center;
-  margin-top: 30px;
+  margin: auto;
+}
+
+input {
+  display: inline-block;
+}
+
+.add_todo {
+  /*height: 5%;*/
+  width: 80%;
+  font-size: 30px;
+  border: none;
+  background-color: #e74c3c;
+}
+
+.add_todo:focus {
+  outline: none;
+  background-color: #fff;
+
+}
+
+.sub_new {
+  font-size: 30px;
+  background-color: #e74c3c;
+  width: 15%;
+  border: none;
+  color: #fff;
+}
+
+.sub_new:hover {
+  color: #ecf0f1;
 }
 
 .todo {
   background-color: #f39c12;
   color: #fff;
-  font-size: 30px;
+  font-size: 25px;
   position: relative;
-  padding: 1px 15px;
-  margin-top: 20px;
+  padding: 1px 1px 1px 15px;
+  margin-top: 10px;
   cursor: move;
+}
+
+.todo p {
+  width: 85%;
 }
 
 .todo ul {
   position: absolute;
-  bottom: 0px;
+  bottom: -16px;
   right: 0px;
   margin-right: 10px;
+  float: right;
+  width: 15%;
+  text-align: right;
 }
 
 .todo li {
@@ -42,6 +80,14 @@ body {
   background-color: #e74c3c;
 }
 
+.todo i {
+  color: #fff;
+}
+
+.todo a i:hover {
+  color: #ecf0f1;
+}
+
 .todo:hover {
-  /*background-color: #eee;*/
+  /*opacity: .8;*/
 }

@@ -2,7 +2,7 @@
   <div class="toolbox">
     <form id='new_todo' action='/create' method='post'>
       <input type="text" class="add_todo" name='todo[task]'/>
-      <input type='submit' value='Add Todo'>
+      <input type='submit' class="sub_new" value='add'>
     </form>
   </div>
 
@@ -10,9 +10,8 @@
 
     <% @todos.each do |todo| %>
     <div id="<%= todo.id %>" class="todo <%= 'complete' if todo.complete  %>">
-      <p><%= todo.task %> <i class="<%= 'fa fa-check-circle-o' if todo.complete %>" ></i></p>
+      <p><i class="<%= 'fa fa-check-circle' if todo.complete %>" ></i> <%= todo.task %></p>
       <ul>
-
         <li><a href="#" class="delete" ><i class="fa fa-trash-o"></i></a></li>
         <li><a href="#" class="complete"><i class="fa fa-star-o"></i></a></li>
       </ul>
