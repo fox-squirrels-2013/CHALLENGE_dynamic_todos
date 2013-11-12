@@ -10,10 +10,11 @@
 
     <% @todos.each do |todo| %>
     <div id="<%= todo.id %>" class="todo <%= 'complete' if todo.complete  %>">
-      <h2><%= todo.task %></h2>
+      <p><%= todo.task %> <i class="<%= 'fa fa-check-circle-o' if todo.complete %>" ></i></p>
       <ul>
-        <li><a href="#" class="delete" ><i class="fa fa-trash-o fa-2x delete"></i></a></li>
-        <li><a href="#" class="complete"><i class="fa fa-star-o fa-2x complete"></i></a></li>
+
+        <li><a href="#" class="delete" ><i class="fa fa-trash-o"></i></a></li>
+        <li><a href="#" class="complete"><i class="fa fa-star-o"></i></a></li>
       </ul>
     </div>
     <% end %>

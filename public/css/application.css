@@ -1,5 +1,9 @@
+body {
+  background-color: #c0392b;
+}
+
 #todo {
-  width: 500px;
+  width: 60%;
   margin: auto;
 }
 
@@ -9,8 +13,11 @@
 }
 
 .todo {
+  background-color: #f39c12;
+  color: #fff;
+  font-size: 30px;
   position: relative;
-  padding: 10px;
+  padding: 1px 15px;
   margin-top: 20px;
   cursor: move;
 }
@@ -32,9 +39,9 @@
 }
 
 .todo.complete {
-  background-color: yellow;
+  background-color: #e74c3c;
 }
 
 .todo:hover {
-  background-color: #eee;
+  /*background-color: #eee;*/
 }
