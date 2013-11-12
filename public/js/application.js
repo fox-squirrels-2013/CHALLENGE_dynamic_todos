@@ -2,7 +2,8 @@ $(document).ready(function() {
   function bindEvents() {
     $('#new_todo').on('submit', addTodo)
     $(".todo_list").on('click', deleteOrComplete)
-    console.log( $("#5") )
+    $(".todo_list").sortable()
+    $( ".todo" ).disableSelection();
   }
 
   function addTodo(e){
