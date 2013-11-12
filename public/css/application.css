@@ -119,9 +119,14 @@ input {
   color: #fff;
 }
 
+#nav p {
+  padding-left: 5px;
+}
+
 #nav i {
   position: absolute;
   right: 5px;
   top: 45%;
   color: #fff;
+  cursor: pointer;
 }
