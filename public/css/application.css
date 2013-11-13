@@ -1,9 +1,18 @@
 body {
-  background-color: #e74c3c;
+background-color: #FF8100;
+/*background-image: linear-gradient(45deg, #090C0F 25%, transparent 25%, transparent 75%, #090C0F 75%, #090C0F), 
+linear-gradient(-45deg, #090C0F 25%, transparent 25%, transparent 75%, #090C0F 75%, #090C0F);
+background-size:60px 60px;*/
 }
 
+/*
+background-color: #eee;
+background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
+linear-gradient(-45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+background-size:60px 60px;*/
+
 #todo {
-  width: 700px;
+  width: 600px;
   margin: auto;
   padding-bottom: 100px;
 }
@@ -20,19 +29,19 @@ input {
 
 .add_todo {
   /*color: #A03D6D;*/
-  color: #fff;
+  color: #04004D;
   width: 80%;
   font-size: 30px;
   border: none;
-  background-color: #e74c3c;
-  border-bottom: 3px solid #fff;
+  background-color: #FFF2E6;
+  /*border-bottom: 3px solid #FFC080;*/
 
 }
 
-::-webkit-input-placeholder { /* WebKit browsers */  color:    #C1554A; }
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */    color:    #C1554A; }
-::-moz-placeholder { /* Mozilla Firefox 19+ */       color:    #C1554A; }
-:-ms-input-placeholder { /* Internet Explorer 10+ */ color:    #C1554A; }
+::-webkit-input-placeholder { /* WebKit browsers */  color:    #FFCB80; }
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */    color:    #FFCB80; }
+::-moz-placeholder { /* Mozilla Firefox 19+ */       color:    #FFCB80; }
+:-ms-input-placeholder { /* Internet Explorer 10+ */ color:    #FFCB80; }
 
 .add_todo:focus {
   outline: none;
@@ -42,13 +51,13 @@ input {
   font-size: 30px;
   width: 15%;
   border: none;
-  color: #fff;
-  background-color: #C1554A;
+  color: #FFC080;
+  background-color: #FF9700;
   border-radius: 3px;
 }
 
 .sub_new:hover {
-  background-color: #A03D6D;
+  color: #fff;
 }
 
 .sub_new:focus {
@@ -57,8 +66,8 @@ input {
 
 
 .todo {
-  background-color: #A03D6D;
-  color: #fff;
+  background-color: #FFF2E6;
+  color: #806040;
   font-size: 25px;
   position: relative;
   padding: 1px 1px 1px 15px;
@@ -66,9 +75,11 @@ input {
   cursor: move;
 }
 
+
 .todo.complete {
-  background-color: #C1554A;
-  color: #fff;
+  background-color: #FFC080;
+  /*background-color: #6763B3;*/  /*nice blue color*/
+  color: #806040;
 }
 
 .todo p {
@@ -95,7 +106,7 @@ input {
 }
 
 .todo i {
-  color: #fff;
+  color: #806040;
 }
 
 /*.todo a i:hover {
