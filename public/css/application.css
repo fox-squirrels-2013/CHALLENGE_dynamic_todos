@@ -29,19 +29,19 @@ input {
 
 .add_todo {
   /*color: #A03D6D;*/
-  color: #04004D;
+  color: #4D0028;
   width: 80%;
   font-size: 30px;
   border: none;
-  background-color: #FFF2E6;
-  /*border-bottom: 3px solid #FFC080;*/
+  background-color: #FF8100;
+  border-bottom: 3px solid #FFC080;
 
 }
 
-::-webkit-input-placeholder { /* WebKit browsers */  color:    #FFCB80; }
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */    color:    #FFCB80; }
-::-moz-placeholder { /* Mozilla Firefox 19+ */       color:    #FFCB80; }
-:-ms-input-placeholder { /* Internet Explorer 10+ */ color:    #FFCB80; }
+::-webkit-input-placeholder { /* WebKit browsers */  color:    #FFC080; }
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */    color:    #FFC080; }
+::-moz-placeholder { /* Mozilla Firefox 19+ */       color:    #FFC080; }
+:-ms-input-placeholder { /* Internet Explorer 10+ */ color:    #FFC080; }
 
 .add_todo:focus {
   outline: none;
@@ -49,15 +49,16 @@ input {
 
 .sub_new {
   font-size: 30px;
-  width: 15%;
+  width: 40px;
+  /*width: 15%;*/
   border: none;
-  color: #FFC080;
-  background-color: #FF9700;
-  border-radius: 3px;
+  color: #FF8100;
+  background-color: #FFC080;
+  border-radius: 30px;
 }
 
 .sub_new:hover {
-  color: #fff;
+  color: #4D0028;
 }
 
 .sub_new:focus {
@@ -67,7 +68,7 @@ input {
 
 .todo {
   background-color: #FFF2E6;
-  color: #806040;
+  color: #FF8100;
   font-size: 25px;
   position: relative;
   padding: 1px 1px 1px 15px;
@@ -79,7 +80,7 @@ input {
 .todo.complete {
   background-color: #FFC080;
   /*background-color: #6763B3;*/  /*nice blue color*/
-  color: #806040;
+  color: #FF8100;
 }
 
 .todo p {
@@ -106,7 +107,7 @@ input {
 }
 
 .todo i {
-  color: #806040;
+  color: #FF8100;
 }
 
 /*.todo a i:hover {
@@ -120,10 +121,10 @@ input {
 #nav {
   border-radius: 0 15px 15px 0;
   background-color: #A03D6D;
-  width: 15%;
-  height: 400px;
-  top: 20%;
-  left: -13%;
+  /*width: 15%;*/
+  /*height: 400px;*/
+  /*top: 20%;*/
+  /*left: -13%;*/
   position: absolute;
   /*font-size: 30px;*/
   color: #fff;
@@ -139,6 +140,14 @@ input {
   top: 45%;
   color: #fff;
   cursor: pointer;
+}
+
+.csquare {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  background-color: red;
+  margin: 10px;
 }
 
 /*#nav i:hover {
